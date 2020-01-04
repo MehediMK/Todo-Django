@@ -16,8 +16,8 @@
     </form>
     <ul>
         {% for todo in mytodo %}
-        <li>{{ todo.content }}
-            <form action="{% url 'mytodo'  %}{{ todo.id }}" method="post" >{% csrf_token %}
+        <li style="padding:10px 0px" >{{ todo.content }}
+            <form style="display:inline;" action="{% url 'mytodo'  %}{{ todo.id }}" method="post" >{% csrf_token %}
                 <input type="submit" value="Delete">
             </form></li>
         {% endfor %}
